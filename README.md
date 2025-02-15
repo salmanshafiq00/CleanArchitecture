@@ -45,6 +45,28 @@
 - Docker (for containerized dependencies)
 - PostgreSQL/Redis
 
+  🏭 Solution Structure
+src/
+├── Domain/          # Core business models
+├── Application/     # Use cases & business logic
+├── Infrastructure/  # External implementations
+├── WebApi/             # API endpoints & DI
+tests/               # Unit & integration tests
+
+###🚦 Quality Assurance
+RFC-compliant error responses
+FluentValidation integration
+Transactional consistency guarantees
+Centralized package management
+CI/CD-ready configuration
+
+###🚧 Roadmap
+Hybrid Caching Implementation
+Comprehensive Test Suite
+ASP.NET Core 8 Performance Optimizations
+Kubernetes Deployment Samples
+GRPC Endpoints
+
 ### Installation
 ```bash
 git clone https://github.com/salmanshafiq00/cleanarchitecture.git
@@ -53,24 +75,4 @@ docker-compose up -d
 dotnet restore
 dotnet run --project src/WebApi
 
-🏭 Solution Structure
-src/
-├── Domain/          # Core business models
-├── Application/     # Use cases & business logic
-├── Infrastructure/  # External implementations
-├── WebApi/             # API endpoints & DI
-tests/               # Unit & integration tests
 
-🚦 Quality Assurance
-RFC-compliant error responses
-FluentValidation integration
-Transactional consistency guarantees
-Centralized package management
-CI/CD-ready configuration
-
-🚧 Roadmap
-Hybrid Caching Implementation
-Comprehensive Test Suite
-ASP.NET Core 8 Performance Optimizations
-Kubernetes Deployment Samples
-GRPC Endpoints
