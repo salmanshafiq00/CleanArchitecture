@@ -7,9 +7,6 @@
 
 **A production-ready WebAPI template** implementing modern software practices with robust security, scalability, and maintainability at its core. Built for .NET 8 with ❤️
 
-![Clean Architecture Diagram](https://via.placeholder.com/800x400.png?text=Clean+Architecture+Diagram) 
-*(Consider adding your architecture diagram here)*
-
 ## 🌟 Key Features
 
 ### 🏗️ Foundation
