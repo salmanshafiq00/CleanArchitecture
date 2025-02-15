@@ -45,27 +45,27 @@
 - Docker (for containerized dependencies)
 - PostgreSQL/Redis
 
-  🏭 Solution Structure
-src/
-├── Domain/          # Core business models
-├── Application/     # Use cases & business logic
-├── Infrastructure/  # External implementations
-├── WebApi/             # API endpoints & DI
-tests/               # Unit & integration tests
+🏭 Solution Structure
+
+📁 src/ \
+├─ 📁 Domain/ - Core business models \
+├─ 📁 Application/ - Use cases & business logic \
+├─ 📁 Infrastructure/ - External implementations \
+└─ 📁 WebApi/ - API endpoints & DI \
 
 ###🚦 Quality Assurance
-RFC-compliant error responses
-FluentValidation integration
-Transactional consistency guarantees
-Centralized package management
-CI/CD-ready configuration
+- RFC-compliant error responses
+- FluentValidation integration
+- Transactional consistency guarantees
+- Centralized package management
+-CI/CD-ready configuration
 
 ###🚧 Roadmap
-Hybrid Caching Implementation
-Comprehensive Test Suite
-ASP.NET Core 8 Performance Optimizations
-Kubernetes Deployment Samples
-GRPC Endpoints
+- Hybrid Caching Implementation
+- Comprehensive Test Suite
+- ASP.NET Core 8 Performance Optimizations
+- Kubernetes Deployment Samples
+- GRPC Endpoints
 
 ### Installation
 ```bash
