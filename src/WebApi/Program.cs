@@ -16,7 +16,7 @@ builder.Host
 // Add services to the container.
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.Services.AddWebServices();
+builder.Services.AddWebServices(builder.Configuration);
 
 
 // Configure the HTTP request pipeline.
@@ -28,12 +28,6 @@ ServiceLocator.ServiceProvider = app.Services;
 
 // Configure pipeline
 app.UseApplicationPipeline();
-
-//if (app.Environment.IsDevelopment())
-//{
-//    await app.IdentityInitialiseDatabaseAsync();
-//    await app.AppInitialiseDatabaseAsync();
-//}
 
 app.MapHub<NotificationHub>("/notificationHub").RequireAuthorization();
 

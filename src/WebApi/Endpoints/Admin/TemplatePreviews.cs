@@ -1,6 +1,4 @@
 ﻿using FluentEmail.Core.Interfaces;
-using WebApi.Extensions;
-using WebApi.Infrastructure;
 
 namespace WebApi.Endpoints.Admin;
 
@@ -44,7 +42,7 @@ public class TemplatePreviews : EndpointGroupBase
         var model = new
         {
             ReceiverName = "John",
-            SiteLink = "http://localhost:7105/"
+            SiteLink = "https://your-app.com/"
         };
 
         var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Templates", "ForgotPassword", "ResetPasswordConfirmation.cshtml");

@@ -38,7 +38,7 @@
       "generateOptionalParameters": false,
       "exportTypes": true,
       "wrapDtoExceptions": false,
-      "exceptionClass": "LMSException",
+      "exceptionClass": "ApiException",
       "clientBaseClass": null,
       "wrapResponses": false,
       "wrapResponseMethods": [],

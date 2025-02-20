@@ -1,12 +1,9 @@
-﻿using Infrastructure.BackgroundJobs;
-using HealthChecks.UI.Client;
+﻿using HealthChecks.UI.Client;
+using Infrastructure.BackgroundJobs;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.FileProviders;
 using Serilog;
-using WebApi.Extensions;
 using WebApi.Middlewares;
-using Infrastructure.Identity;
-using Infrastructure.Persistence;
 
 namespace WebApi;
 

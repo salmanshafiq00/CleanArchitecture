@@ -1,9 +1,7 @@
 ﻿using System.Text.Json;
 using Application.Common.Abstractions.Identity;
-using Microsoft.Extensions.Primitives;
 using NSwag;
 using NSwag.Generation.Processors.Security;
-using WebApi.Extensions;
 using WebApi.Middlewares;
 using WebApi.Services;
 using ZymLabs.NSwag.FluentValidation;
@@ -12,10 +10,10 @@ namespace WebApi;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddWebServices(this IServiceCollection services)
+    public static IServiceCollection AddWebServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddControllerWithJsonConfiguration();
-        services.AddCorsPolicy();
+        services.AddCorsPolicy(configuration);
         services.AddCustomProblemDetails();
         services.AddOpenApiDocumentConfig();
 
@@ -42,17 +40,15 @@ public static class DependencyInjection
         });
     }
 
-    private static void AddCorsPolicy(this IServiceCollection services)
+    private static void AddCorsPolicy(this IServiceCollection services, IConfiguration configuration)
     {
+        var allowedOrigins = configuration.GetSection("AllowedOrigins").Get<string[]>() ?? [];
+
         services.AddCors(options =>
         {
             options.AddPolicy(ApiConstants.AllowOriginPolicy, builder =>
             {
-                builder.WithOrigins(
-                    "http://localhost:7105",
-                    "https://localhost:7105",
-                    "http://localhost:7101"
-                )
+                builder.WithOrigins(allowedOrigins)
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
