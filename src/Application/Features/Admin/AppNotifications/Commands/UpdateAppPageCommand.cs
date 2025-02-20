@@ -1,9 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Caching;
-using Application.Common.Abstractions.Messaging;
-using Domain.Shared;
-
-namespace Application.Features.Admin.AppNotifications.Commands;
+﻿namespace Application.Features.Admin.AppNotifications.Commands;
 
 public record UpdateAppNotificationCommand(
     Guid Id) : ICacheInvalidatorCommand

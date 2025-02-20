@@ -9,7 +9,7 @@ public record GetRoleListQuery
     : DapperPaginatedData, ICacheableQuery<PaginatedResponse<RoleModel>>
 {
     [JsonIgnore]
-    public string CacheKey => $"Role_{Offset}_{Next}";
+    public string CacheKey => $"Role:{Offset}:{Next}";
     public TimeSpan? Expiration => null;
     public bool? AllowCache => null;
 }

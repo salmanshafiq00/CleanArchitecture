@@ -1,6 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Identity;
-using Application.Common.Abstractions.Messaging;
+﻿using Application.Common.Abstractions.Identity;
 
 namespace Application.Features.Admin.AppNotifications.Commands;
 

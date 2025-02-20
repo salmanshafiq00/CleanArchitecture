@@ -1,9 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Caching;
-using Application.Common.Abstractions.Messaging;
-using Application.Common.Constants;
-
-namespace Application.Features.Admin.AppMenus.Commands;
+﻿namespace Application.Features.Admin.AppMenus.Commands;
 
 public record DeleteAppMenuCommand(Guid Id) : ICacheInvalidatorCommand
 {

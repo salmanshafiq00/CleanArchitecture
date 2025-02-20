@@ -1,7 +1,5 @@
 ﻿using Application.Common.Abstractions.Identity;
-using Application.Common.Abstractions.Messaging;
 using Application.Features.Identity.Models;
-using Domain.Shared;
 
 namespace Application.Features.Identity.Commands;
 

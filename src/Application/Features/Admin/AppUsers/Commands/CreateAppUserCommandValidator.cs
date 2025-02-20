@@ -1,6 +1,4 @@
-﻿using Application.Common.DapperQueries;
-
-namespace Application.Features.Admin.AppUsers.Commands;
+﻿namespace Application.Features.Admin.AppUsers.Commands;
 
 internal sealed class CreateAppUserCommandValidator : AbstractValidator<CreateAppUserCommand>
 {

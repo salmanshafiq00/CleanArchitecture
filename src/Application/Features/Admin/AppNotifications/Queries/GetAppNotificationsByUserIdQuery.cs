@@ -1,7 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Messaging;
-
-namespace Application.Features.Admin.AppNotifications.Queries;
+﻿namespace Application.Features.Admin.AppNotifications.Queries;
 
 public record GetAppNotificationsByUserIdQuery(string UserId, int Page, int Size)
     : ICacheableQuery<List<AppNotificationModel>>

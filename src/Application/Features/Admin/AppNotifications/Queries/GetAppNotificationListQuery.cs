@@ -1,14 +1,10 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Messaging;
-using Application.Common.DapperQueries;
-
-namespace Application.Features.Admin.AppNotifications.Queries;
+﻿namespace Application.Features.Admin.AppNotifications.Queries;
 
 public record GetAppNotificationListQuery
     : DapperPaginatedData, ICacheableQuery<PaginatedResponse<AppNotificationModel>>
 {
     [JsonIgnore]
-    public string CacheKey => $"AppNotification_{Offset}_{Next}";
+    public string CacheKey => $"AppNotification:{Offset}:{Next}";
     public TimeSpan? Expiration => null;
     public bool? AllowCache => null;
 }

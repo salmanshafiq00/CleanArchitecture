@@ -1,7 +1,4 @@
-﻿using Application.Common.Abstractions.Caching;
-using Application.Common.Abstractions.Identity;
-using Application.Common.Abstractions.Messaging;
-using Domain.Shared;
+﻿using Application.Common.Abstractions.Identity;
 
 namespace Application.Features.Admin.AppUsers.Commands;
 

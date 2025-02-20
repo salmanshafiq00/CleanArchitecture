@@ -1,8 +1,5 @@
 ﻿using System.Data;
-using Application.Common.Abstractions;
-using Application.Common.Abstractions.Caching;
 using Application.Common.Abstractions.Identity;
-using Application.Common.Abstractions.Messaging;
 
 namespace Application.Features.Admin.AppMenus.Queries;
 

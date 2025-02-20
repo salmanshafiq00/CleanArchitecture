@@ -1,15 +1,11 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Messaging;
-using Application.Common.DapperQueries;
-
-namespace Application.Features.Admin.AppMenus.Queries;
+﻿namespace Application.Features.Admin.AppMenus.Queries;
 
 //[Authorize(Policy = Permissions.Admin.AppMenus.View)]
 public record GetAppMenuListQuery
     : DapperPaginatedData, ICacheableQuery<PaginatedResponse<AppMenuModel>>
 {
     [JsonIgnore]
-    public string CacheKey => $"AppMenu_{Offset}_{Next}";
+    public string CacheKey => $"AppMenu:{Offset}:{Next}";
 
     public TimeSpan? Expiration => null;
 

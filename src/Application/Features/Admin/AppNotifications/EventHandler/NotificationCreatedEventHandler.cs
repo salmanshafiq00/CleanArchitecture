@@ -1,5 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Domain.Admin;
+﻿using Domain.Admin;
 
 namespace Application.Features.Admin.AppNotifications.EventHandler;
 

@@ -1,9 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Messaging;
-using Application.Common.DapperQueries;
-using Application.Common.Security;
-using Application.Features.Admin.AppUsers.Models;
-using Application.Features.Admin.AppNotifications.Queries;
+﻿using Application.Features.Admin.AppUsers.Models;
 
 namespace Application.Features.Admin.AppUsers.Queries;
 
@@ -13,7 +8,7 @@ public record GetAppUserListQuery
     : DapperPaginatedData, ICacheableQuery<PaginatedResponse<AppUserModel>>
 {
     [JsonIgnore]
-    public string CacheKey => $"AppUserModel_{Offset}_{Next}";
+    public string CacheKey => $"AppUserModel:{Offset}:{Next}";
     public TimeSpan? Expiration => null;
     public bool? AllowCache => null;
 }

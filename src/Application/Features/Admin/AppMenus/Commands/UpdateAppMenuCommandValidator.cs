@@ -1,6 +1,4 @@
-﻿using Application.Common.DapperQueries;
-
-namespace Application.Features.Admin.AppMenus.Commands;
+﻿namespace Application.Features.Admin.AppMenus.Commands;
 
 public class UpdateAppMenuCommandValidator : AbstractValidator<UpdateAppMenuCommand>
 {

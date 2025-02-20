@@ -1,8 +1,4 @@
-﻿using Application.Common.Abstractions;
-using Application.Common.Abstractions.Caching;
-using Application.Common.Abstractions.Messaging;
-using Application.Common.Security;
-using Application.Features.Admin.AppUsers.Models;
+﻿using Application.Features.Admin.AppUsers.Models;
 
 namespace Application.Features.Admin.AppUsers.Queries;
 
